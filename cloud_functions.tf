@@ -1,7 +1,7 @@
 resource "google_cloudfunctions_function" "get_current_solar_data" {
-  name        = "get-current-solar-data"
-  description = "Function to query GoodWe Solar API"
-  runtime     = "python39"
+  name          = "get-current-solar-data"
+  description   = "Function to query GoodWe Solar API"
+  runtime       = "python39"
   max_instances = 5
   min_instances = 0
 
@@ -25,7 +25,7 @@ resource "google_cloudfunctions_function" "get_current_solar_data" {
   environment_variables = {
     # GOODWE_STATION_ID = var.GOODWE_STATION_ID
     # GOODWE_USER       = var.GOODWE_USER
-    GCS_BUCKET_NAME   = var.GCS_BUCKET_NAME
+    GCS_BUCKET_NAME = var.GCS_BUCKET_NAME
   }
 
   secret_environment_variables {
@@ -34,7 +34,7 @@ resource "google_cloudfunctions_function" "get_current_solar_data" {
     project_id = "1054661108717"
     version    = 1
   }
-  
+
   secret_environment_variables {
     key        = "GOODWE_PASSWORD"
     secret     = "GOODWE_PASSWORD"
