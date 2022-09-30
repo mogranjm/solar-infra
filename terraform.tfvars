@@ -1,2 +1,2 @@
 project_id = "servian-u-practice"
-region     = "australia-southeast2"
+region     = "australia-southeast1"
